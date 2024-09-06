@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>تسجيل الدخول</title>
+    <link rel="stylesheet" href="login.css">
+</head>
+<body class="ar">
+
+<div class="container">
+    <form method="POST" action="login.php"> <!-- تحديد action لملف PHP -->
+        <fieldset>
+            <legend>تسجيل الدخول</legend>
+            <label for="name"><h3>اسم المستخدم</h3></label>
+            <input type="text" id="name" name="name" required>
+            
+            <label for="pass"><h3>كلمة السر</h3></label>
+            <input type="password" id="pass" name="pass" required>
+
+            <input type="submit" name="submit" value="تسجيل الدخول">
+        </fieldset>
+    </form>
+
+    <div class="lang-buttons">
+        <button onclick="changeLanguage('ar')">عربي</button>
+        <button onclick="changeLanguage('en')">English</button>
+    </div>
+</div>
+
+<script>
+    function changeLanguage(lang) {
+        document.body.className = lang;
+        const legend = document.querySelector('legend');
+        const submitBtn = document.querySelector('input[type="submit"]');
+        if (lang === 'ar') {
+            legend.innerHTML = 'تسجيل الدخول';
+            submitBtn.value = 'تسجيل الدخول';
+            document.querySelector('label[for="name"] h3').textContent = 'اسم المستخدم';
+            document.querySelector('label[for="pass"] h3').textContent = 'كلمة السر';
+        } else {
+            legend.innerHTML = 'Login';
+            submitBtn.value = 'Login';
+            document.querySelector('label[for="name"] h3').textContent = 'Username';
+            document.querySelector('label[for="pass"] h3').textContent = 'Password';
+        }
+    }
+</script>
+
+</body>
+</html>

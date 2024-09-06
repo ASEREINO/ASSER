@@ -1,0 +1,131 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yousif Ali Abdullah Asiri</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+   <link rel="stylesheet" href="home.css">
+</head>
+<body>
+    <header>
+        <div class="language-switcher" onclick="window.location.href='ar.php'"> Arabic</div>
+        <img src="ys.jpg" alt="Yousif Ali Abdullah Asiri">
+        <div class="header-content">
+            <h1>Yousif Ali Abdullah Asiri</h1>
+            <h3>Programmer & Web Developer</h3>
+            <div class="contact-info">
+                <div>
+                    <i class="fas fa-phone"></i>
+                    <span>+966 550 565 690</span>
+               <br><br> </div>
+                <div>
+                    <i class="fas fa-envelope"></i>
+                    <span>90yosf@gmail.com</span>
+                <br><br></div>
+                <div>
+                    <i class="fas fa-map-marker-alt"></i>
+                    <span>Riyadh, Saudi Arabia</span>
+                <br><br></div>
+            </div>
+        </div>
+    </header>
+
+    <div class="container">
+        <div class="box" id="about-box">
+            <h3>About Me</h3>
+            <p>Introduction and career objectives.</p>
+        </div>
+
+        <div class="box" id="education-box">
+            <h3>Education</h3>
+            <p>Diploma in Programming Technology and Web Development.</p>
+        </div>
+
+        <div class="box" id="experience-box">
+            <h3>Experience</h3>
+            <p>Professional experience summary.</p>
+        </div>
+        <div class="box" id="projects-box">
+            <h3>Projects</h3>
+            <p>Key projects and accomplishments.</p>
+        </div>
+        <div class="box" id="skills-box">
+            <h3>Skills</h3>
+            <p>Technical skills and programming languages.</p>
+        </div>
+        <div class="box" id="courses-box">
+            <h3>Courses</h3>
+            <p>List of certifications and courses.</p>
+        </div>
+    </div>
+
+    <!-- Content Sections -->
+    <div id="about-content" class="content">
+        <h2>About Me</h2>
+        <p>I am Yousif Ali Abdullah Asiri, holding a diploma in Programming Technology and Web Development, along with a certification in Office Management. I am skilled in Back-End programming using Java, JavaScript, and PHP, with additional expertise in HTML, CSS, SQL, and SQLPL. I have experience in Human Resources. I aim to develop my skills and apply modern technologies to achieve new successes.</p>
+    </div>
+
+    <div id="education-content" class="content">
+        <h2>Education</h2>
+        <p>
+            <strong>Diploma in Programming Technology and Web Development (2021 - 2024/6)</strong><br>
+            College of Communications and Information, Riyadh
+        </p>
+    </div>
+
+    <div id="experience-content" class="content">
+        <h2>Experience</h2>
+        <p>HR Writer (2022/6 - 2023/9): Effective Communication, Document Management, Employment Data Analysis.</p>
+    </div>
+
+    <div id="projects-content" class="content">
+        <h2>Projects</h2>
+        <p>My graduation project, Guide KSA, is a website designed to offer a comprehensive guide to all regions of Saudi Arabia. The site provides detailed information on tourist attractions, accommodation, cultural and recreational activities, and local services. It was developed using PHP, Java, JavaScript, SQL, HTML, and CSS. The project offers an integrated platform to enhance user experience and facilitate trip planning.</p>
+    </div>
+
+    <div id="skills-content" class="content">
+        <h2>Skills</h2>
+        <ul>
+            <li>Back-End Programming: Java, JavaScript, PHP</li>
+            <li>Front-End Development: HTML, CSS</li>
+            <li>Database Management: SQL, SQLPL</li>
+            <li>Tools: VScode, Android Studio, Oracle APEX</li>
+            <li>Office Management & Human Resources</li>
+            <li>Analysis</li>
+<li>Teamwork</li>
+<li>Data Entry</li>
+
+        </ul>
+    </div>
+
+    <div id="courses-content" class="content">
+        <h2>Courses</h2>
+        <ul>
+            <li>Certified in Introductory Programming (Barmej Platform)</li>
+            <li>Certified in Office Management</li>
+            <li>English Language Proficiency Certificate (Zarka Academy)</li>
+            <li>Feasibility Studies for Business Management Certification</li>
+        </ul>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Yousif Ali Abdullah Asiri</p>
+    </footer>
+
+    <script>
+        const boxes = document.querySelectorAll('.box');
+        const contents = document.querySelectorAll('.content');
+
+        boxes.forEach(box => {
+            box.addEventListener('click', () => {
+                contents.forEach(content => content.classList.remove('active'));
+                document.getElementById(box.id.replace('box', 'content')).classList.add('active');
+                window.scrollTo(0, document.getElementById(box.id.replace('box', 'content')).offsetTop);
+            });
+        });
+    </script>
+</body>
+</html>
